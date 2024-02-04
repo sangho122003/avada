@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trí Lê Minh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,.start{
+            margin: 0;
+        }
+        body,.box{margin: 0;}
+        H1,H1{
+            margin-left: 20px;
+        }
+        .start.div{
+            display: 1;
+        }   
+        .start{display: flex;}
+        .alo{
+            width: 50%;
+            height: 100%;
+        }
+        .box{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+        .box:hover{
+                background-color: rgb(200,200, 200);
+                color: black;
+            
+        }
+        H1{font-size: 20px;}
+        a{
+            color: white;
+        }
+        
+#imageSlider {
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+        .a{
+        width: 700PX;
+        height: auto;
+        border: 1px solid black;
+        font-size: 20px;
+        background-color: white;
+        
+      }
+      input{
+        height: 30px;
+     }
+     p {
+            text-align: justify;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="start" style="background-color: black; color: white; width: 100%; height: 30px; display: flex; justify-content: space-between; align-items: end; position:fixed ;">
+        <div class="alo" style="display: flex; flex: 1;"> 
+            <a class="box" href="#HOME">HOME</a>
+            <a class="box" href="#BAND">BAND</a>
+            <a class="box" href="#TOUR">TOUR</a>
+            <a class="box" href="#b1">CONTACT</a>
+            <H1 class="box">MORE \/</H1>
+        </div>
+        <div style="display: flex; align-items: center;">
+            <div><img style="width: 30px; height: 31px; border: 1px solid red;" src="hinh/" alt=""></div>
+        </div>
+    </div>
+    <div>
+        <div id="HOME">
+                <div id="imageSlider">
+                    <img src="hinh/chicago.jpg" alt="Slide 1" style="width:100%;">
+                    <img src="hinh/la.jpg" alt="Slide 2" style="width:100%; display: none;">
+                    <img src="hinh/ny.jpg" alt="Slide 3" style="width:100%; display: none;">
+                </div>
+                <script>
+                    var currentSlide = 0;
+                    var slides = document.querySelectorAll('#imageSlider img');
+                    function showSlide() {
+                        slides[currentSlide].style.display = 'none';
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].style.display = 'block';
+                    }
+                
+                    setInterval(showSlide, 2000);
+                </script>
+        </div>
+        <div id="BAND" style="text-align: center; height: 100%; text-align: center;" >
+            <H1>THE BAND</H1>
+            <H5>We Love Music</H5>
+            <div style="display: flex; justify-content: center;">
+                <p style="width: 80%;height: auto;">
+                    We have created a fictional band website. Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, 
+                    sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+           
+            <div style="display: flex; gap: 50px; justify-content: center;">
+                <div>
+                    <h1>Name</h1>
+                    <img src="hinh/bandmember.jpg" alt="">
+                </div>
+                <div>
+                    <h1>Name</h1>
+                    <img src="hinh/bandmember.jpg" alt="">
+                </div>
+                <div>
+                    <h1>Name</h1>
+                    <img src="hinh/bandmember.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="TOUR" style="background-color: black; width: 100%; height: auto;  ">
+            <div style="text-align: center; position: relative;">
+                <H1 style="color: white; font-size: 30px; margin-top: 20px;">TOUR DATES</H1>
+                <H5 style="color: white">Remember to book your tickets!</H5>
+            </div>
+           
+            <div style="margin-top: 10px;margin: 0 auto;display: flex; display: flex; justify-content: center;">
+                <div style="margin-left: auto; margin-right: auto;">
+                    <div class="a" style="display: flex; gap: 10px;">September <div style=" height: auto;width: auto;background-color: red; color: white;">Sold out</div> </div> 
+                    <div class="a" style="display: flex; gap: 10px;">October <div style=" height: auto;width: auto;background-color: red; color: white;">Sold out</div> </div> 
+                    <div class="a">November</div>
+                </div>
+            </div>
+            <div class="menu" style="margin-top: 10px;margin: 0 auto;display: flex; align-items: center; display: flex; justify-content: center;">
+                
+                <div style="display: flex; gap: 45px;margin-top: 50px;">
+                    <div style="height: 500px; width: 200px;background-color: black; color: white;">
+                        <img style="height: 200px; width: 200px;" src="hinh/newyork.jpg" alt="">
+                        <h2>New York</h2>
+                        <h1 style="font-size: 20px;">Fri 27 Nov 2016</h1>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input type="button" value="Buy Tickets">
+                    </div>
+                    <div style="height: 500px; width: 200px;background-color: black; color: white;">
+                        <img style="height: 200px; width: 200px;" src="hinh/paris.jpg" alt="">
+                        <h2>New York</h2>
+                        <h1 style="font-size: 20px;">Fri 27 Nov 2016</h1>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input type="button" value="Buy Tickets">
+                    </div>
+                    <div style="height: 500px; width: 200px;background-color: black; color: white;">
+                        <img style="height: 200px; width: 200px;" src="hinh/sanfran.jpg" alt="">
+                        <h2>New York</h2>
+                        <h1 style="font-size: 20px;">Fri 27 Nov 2016</h1>
+                        <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                        <input type="button" value="Buy Tickets">
+                    </div>
+            </div>
+       
+        </div>
+        <div id="b1" style="background-color: white;">
+            <div style="text-align: center">
+                <H1 style="font-size: 40px; margin-top: 40px;">CONTACT</H1>
+                <H5>Fan? Drop a note!</H5>
+            </div>
+            
+            <div style="display: flex; gap: 10px; margin: 0 auto;display: flex; align-items: center; display: flex; justify-content: center;">
+                <Div style="font-size: 10px;">
+                    <H3>Chicagp,US</H3>
+                    <H3>Phone: 0935381549</H3>
+                    <H3>Email:sangho122003@gmail.com</H3>
+                </Div>
+                <div >
+                <Div style="display: flex; gap: 20px;">
+                    <input type="text" name="" value="Name" id="">
+                    <input type="text" name="" value="Email" id="">
+                </Div>
+                <div style="margin-top: 10px; "> 
+                    <input style="width:353px" type="text" value="Messenger" name="" id=""> 
+                    <br>
+                    <div style="display: flex; justify-content: end; margin-top: 10px; margin-bottom: 50px;">
+                        <input style="font-size: 20px; background-color: black; color: white;" type="button" value="Send">
+                    </div>
+                   
+                </div>
+                </div>
+
+        </div>
+        <div class="img"> <img style="width: 100%;" src="hinh/map.jpg" alt=""></div>
+        <div class="end" style="display: flex; width: 100%; height: 300px; background-color: white; display: flex; justify-content: center; align-items: center;">
+            <div style="height: auto; width: wap;  gap: 20px;">
+                <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge ">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    <p class="w3-medium">Powered by HỒ SANG</a></p>
+                  </footer>
+            </div>
+           
+        
+        </div>
+    </div>
+</body>
+</html>
